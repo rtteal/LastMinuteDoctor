@@ -1,18 +1,18 @@
 'use strict';
 
 // Declare app level module which depends on views, and components
-angular.module('myApp', [
+angular.module('lastMinuteDoctor', [
   'ngRoute',
-  'myApp.view1',
-  'myApp.view2',
-  'myApp.view3',
-  'myApp.version',
+  'lastMinuteDoctor.patient',
+  'lastMinuteDoctor.doctor',
+  'lastMinuteDoctor.home',
+  'lastMinuteDoctor.version',
   'ui.bootstrap'
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.
-  when("/view1", {templateUrl: "view1/view1.html"}).
-  when("/view2", {templateUrl: "view2/view2.html"}).
-  when("/view3", {templateUrl: "view3/view3.html"}).
-  otherwise({redirectTo: '/view3'});
+  when("/patient", {templateUrl: "views/patient/patient.html"}).
+  when("/doctor", {templateUrl: "views/doctor/doctor.html"}).
+  when("/home", {templateUrl: "views/home/home.html"}).
+  otherwise({redirectTo: '/home'});
 }]);
